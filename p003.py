@@ -1,15 +1,21 @@
-import math
-def is_prime(num):
-    if num < 2: return False
-    if num == 2: return True
+# PROBLEM THREE
+# https://projecteuler.net/problem=3
+
+# The prime factors of 13195 are 5, 7, 13 and 29.
+# What is the largest prime factor of the number 600851475143 ?
+def prime(x):
+    num = x
+    cur = 2
     
-    for x in range(3, int(math.sqrt(num))):
-        if not num % x:
-            return False
-    return True
+    while cur <= (num/2):
+        if not num % cur:
+            num /= cur
+            cur = 2
+        else:
+            cur += 1
+    return num
 
-def highest_prime_below(x):
-    return [x for x in range(x) if is_prime(x)][-1]
 
-print highest_prime_below(100)
-print highest_prime_below(600851475143)
+print 'highest prime factor is ' + str(prime(13195))
+print 'highest prime factor is ' + str(prime(600851475143))
+        
