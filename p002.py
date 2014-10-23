@@ -16,4 +16,4 @@ def find_sum_of_even_fibs():
 def is_even(num):
     return not(num % 2)
 
-print find_sum_of_even_fibs()
+print 'the sum of even-valued fibonacci numbers under 1 million is ' + str(find_sum_of_even_fibs())

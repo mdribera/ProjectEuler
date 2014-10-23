@@ -16,6 +16,6 @@ def prime(x):
     return num
 
 
-print 'highest prime factor is ' + str(prime(13195))
-print 'highest prime factor is ' + str(prime(600851475143))
+print 'highest prime factor of 13195 is ' + str(prime(13195))
+print 'highest prime factor of 600851475143 is ' + str(prime(600851475143))
         
