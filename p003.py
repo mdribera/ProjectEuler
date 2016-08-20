@@ -3,10 +3,12 @@
 
 # The prime factors of 13195 are 5, 7, 13 and 29.
 # What is the largest prime factor of the number 600851475143 ?
+
+
 def prime(x):
     num = x
     cur = 2
-    
+
     while cur <= (num/2):
         if not num % cur:
             num /= cur
@@ -16,6 +18,4 @@ def prime(x):
     return num
 
 
-print 'highest prime factor of 13195 is ' + str(prime(13195))
-print 'highest prime factor of 600851475143 is ' + str(prime(600851475143))
-        
+print prime(600851475143)
